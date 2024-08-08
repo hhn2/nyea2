@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'academy/css/style.css' %}">
+</head>
+<body>
+    <h2>Student Dashboard</h2>
+    <p>Welcome, {{ user.username }}!</p>
+    <h3>Videos for your level:</h3>
+    <ul>
+        {% for video in videos %}
+        <li>{{ video.title }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

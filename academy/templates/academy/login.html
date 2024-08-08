@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'academy/css/style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-box login">
+            <h2>로그인</h2>
+            <form method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="text" name="username" required>
+                    <label>ID</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="input-box">
+                    <select name="user_type" required>
+                        <option value="">Select User Type</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" name="remember_me"> 아이디 저장</label>
+                </div>
+                <button type="submit" class="btn">로그인</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

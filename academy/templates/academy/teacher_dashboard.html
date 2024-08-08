@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'academy/css/style.css' %}">
+</head>
+<body>
+    <h2>Teacher Dashboard</h2>
+    <p>Welcome, {{ user.username }}!</p>
+    <a href="{% url 'upload_video' %}">Upload Video</a>
+    <a href="{% url 'register_student' %}">Register Student</a>
+</body>
+</html>

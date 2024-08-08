@@ -1,0 +1,6 @@
+<h2>Available Videos</h2>
+<ul>
+    {% for video in videos %}
+    <li>{{ video.title }} - <a href="{{ video.video_file.url }}">Watch</a></li>
+    {% endfor %}
+</ul>
