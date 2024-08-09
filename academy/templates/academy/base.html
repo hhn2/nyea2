@@ -16,9 +16,15 @@
             <a href="#">수업안내</a>
             <a href="#">수업자료</a>
             <a href="#">오시는길</a>
-            <button class="btnLogin-popup">로그인</button>
+            {% if user.is_authenticated %}
+                <a href="{% url 'teacher_dashboard' %}">{{ user.username }}</a>
+                <a href="{% url 'logout' %}">로그아웃</a>
+            {% else %}
+                <button class="btnLogin-popup">로그인</button>
+            {% endif %}
         </nav>
     </header>
+    
 
     <div class="wrapper">
         <div class="form-box login">
