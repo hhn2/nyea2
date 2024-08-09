@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>뉴욕영어학원</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'academy/css/style.css' %}">
 </head>
+
 <body>
-    <h1>Welcome to the English Academy</h1>
-    <a href="{% url 'login' %}">Login</a>
+    <header>
+        <h2 class="logo"><img src="{% static 'academy/images/horizontal.png' %}" alt="Logo" width="175" height="50"></h2>
+
+        <nav class="navigation">
+            <a href="#">학원소개</a>
+            <a href="#">BLOG</a>
+            <a href="#">수업안내</a>
+            <a href="#">수업자료</a>
+            <a href="#">오시는길</a>
+            <button class="btnLogin-popup">로그인</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div class="form-box login">
+            <h2>로그인</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="text" required>
+                    <label>ID</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> 아이디 저장</label>
+                </div>
+                <button type="submit" class="btn">로그인</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{% static 'academy/js/script.js' %}"></script>
 </body>
+
 </html>

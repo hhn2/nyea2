@@ -17,12 +17,10 @@ Including another URLconf
 # english_academy/urls.py
 from django.contrib import admin
 from django.urls import path, include
-from django.shortcuts import redirect
+from academy import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('academy/', include('academy.urls')),
-    path('', lambda request: redirect('academy/')),  # Redirect root URL to academy
+    path('', include('academy.urls')),  # This will make '' match all the patterns from academy/urls.py
 ]
-
-
