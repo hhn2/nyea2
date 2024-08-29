@@ -21,3 +21,8 @@ class VideoForm(forms.ModelForm):
     class Meta:
         model = Video
         fields = ['title', 'video_file', 'level']
+
+class StudentRegistrationForm(forms.ModelForm):
+    class Meta: 
+        model = Student
+        fields = ['user', 'level']

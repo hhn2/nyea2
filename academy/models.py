@@ -16,7 +16,7 @@ class Level(models.Model):
 
 class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    level = models.ForeignKey(Level, on_delete=models.SET_NULL, null=True, blank=True)
+    level = models.CharField(max_length=50)
 
     def __str__(self):
         return self.user.username

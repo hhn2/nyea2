@@ -1,0 +1,12 @@
+{% extends 'academy/base.html' %}
+
+{% block title %}Videos{% endblock %}
+
+{% block content %}
+<h2>Videos for {{ request.resolver_match.kwargs.level }}</h2>
+<ul>
+    {% for video in videos %}
+        <li><a href="{{ video.get_absolute_url }}">{{ video.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -25,4 +25,3 @@ urlpatterns = [
     path('', lambda request: redirect('academy/')),  # Redirect root URL to academy
 ]
 
-
