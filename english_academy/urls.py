@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('academy/', include('academy.urls')),
     path('', include('academy.urls')),  # This will make '' match all the patterns from academy/urls.py
-    path('', include('video.urls')),
+    path('video/', include('video.urls')),
 ]
