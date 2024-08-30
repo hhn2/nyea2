@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.forms import AuthenticationForm
 from .models import Video, Student
-from .forms import VideoForm, UserForm, StudentForm, StudentRegistrationForm
+from .forms import VideoForm, UserForm, StudentRegistrationForm, StudentForm
 
 def home(request):
     return render(request, 'academy/home.html')

@@ -1,5 +1,4 @@
 # forms.py
-
 from django import forms
 from django.contrib.auth.models import User
 from .models import Student, Video
@@ -12,17 +11,18 @@ class UserForm(forms.ModelForm):
             'password': forms.PasswordInput(),
         }
 
-class StudentForm(forms.ModelForm):
+class StudentRegistrationForm(forms.ModelForm):
     class Meta:
         model = Student
-        fields = ['level']
+        fields = ['user','level']  # Include any other fields you have in the Student model
+
 
 class VideoForm(forms.ModelForm):
     class Meta:
         model = Video
         fields = ['title', 'video_file', 'level']
 
-class StudentRegistrationForm(forms.ModelForm):
-    class Meta: 
+class StudentForm(forms.ModelForm):
+    class Meta:
         model = Student
-        fields = ['user', 'level']
+        fields = ['user', 'level']  # Adjust these fields according to your Student model
